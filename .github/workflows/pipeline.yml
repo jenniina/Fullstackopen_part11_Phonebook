@@ -21,7 +21,6 @@ jobs:
       - name: Lint
         id: lint
         run: npm run lint -- --fix
-        working-directory: frontend
       - name: test
         id: test
         run: npm run test
