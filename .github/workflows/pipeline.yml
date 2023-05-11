@@ -18,6 +18,8 @@ jobs:
       - name: Install dependencies to frontend
         run: npm install
         working-directory: frontend
+      - name: Install dependencies
+        run: npm install
       - name: Lint
         id: lint
         run: npm run lint -- --fix
@@ -29,8 +31,6 @@ jobs:
         id: build
         run: npm run build
         working-directory: frontend
-      - name: Install dependencies
-        run: npm install
       - name: e2e tests
         id: e2e
         uses: cypress-io/github-action@dfda9365a4881a8521b8e3c3538275242aae9151
