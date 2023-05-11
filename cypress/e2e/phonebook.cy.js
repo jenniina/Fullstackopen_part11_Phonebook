@@ -1,3 +1,4 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 describe('site', () => {
   beforeEach(function () {
     cy.visit('http://localhost:3001')
