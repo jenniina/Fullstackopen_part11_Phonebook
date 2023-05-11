@@ -94,8 +94,8 @@ td {
   text-align: left;
   padding: 0.4em;
 }
-.phonebook th,
-.phonebook td {
+.phonebook tr:not(:last-of-type) th,
+.phonebook tr:not(:last-of-type) td {
   border-bottom: 1px solid currentColor;
 }
 .message,
