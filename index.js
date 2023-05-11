@@ -27,6 +27,10 @@ morgan.token('type', function (req, _res) {
 
 const Person = require('./models/person')
 
+app.get('/health', (_req, res) => {
+  res.send('ok')
+})
+
 app.get('/api/persons', (_req, res) => {
   Person.find({}).then((persons) => {
     res.json(persons)
