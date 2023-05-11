@@ -1,0 +1,32 @@
+{
+  "name": "fullstackopen_part11_phonebook",
+  "version": "1.0.0",
+  "description": "Phonebook App for Fullstack Open part 11",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "server:test": "cross-env NODE_ENV=test nodemon index.js",
+    "cypress:open": "cross-env NODE_ENV=test cypress open",
+    "test:e2e": "cross-env NODE_ENV=test cypress run",
+    "lint": "eslint ."
+  },
+  "author": "Jenniina Laine",
+  "license": "ISC",
+  "dependencies": {
+    "@testing-library/cypress": "^9.0.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "cypress": "^12.12.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "eslint-plugin-cypress": "^2.13.3",
+    "nodemon": "^2.0.22"
+  }
+}
