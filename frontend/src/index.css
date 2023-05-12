@@ -116,3 +116,9 @@ td {
 .error {
   color: red;
 }
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  gap: 0.5em;
+}
