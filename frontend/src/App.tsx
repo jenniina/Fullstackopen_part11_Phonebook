@@ -1,11 +1,11 @@
 import { FormEvent, useEffect, useRef, useState } from 'react'
 import Filter from './components/Filter'
-import Person from './components/Person'
 import NewPerson from './components/NewPerson'
 import Notification from './components/Notification'
 import { person, user } from './interfaces'
 import personService from './services/persons'
 import loginService from './services/login'
+import userService from './services/users'
 import Accordion from './components/Accordion'
 import FormLogin from './components/FormLogin'
 import PersonList from './components/PersonList'
@@ -26,12 +26,17 @@ const App = () => {
   const [user, setUser] = useState<user | undefined>(undefined)
   const formLoginRef = useRef(null)
   const formPersonRef = useRef(null)
+  const [users, setUsers] = useState<user[]>()
 
   const LoggedIn = 'loggedPhonebookAppUser'
 
   useEffect(() => {
     personService.getAll().then((initialPersons: person[]) => {
       setPersons(initialPersons)
+    })
+
+    userService.getAll().then((initialUsers: user[]) => {
+      setUsers(initialUsers)
     })
   }, [])
 

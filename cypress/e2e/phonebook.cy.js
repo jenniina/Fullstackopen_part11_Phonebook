@@ -18,7 +18,7 @@ describe('site', () => {
     cy.get('button[type="submit"]').contains('add').click()
     cy.wait(1000)
     cy.get('.phonebook').contains('050-5050505')
-    cy.contains("Testi Testaaja's number was changed")
+    cy.contains('Testi Testaaja\'s number was changed')
   })
 
   it('filters', function () {
